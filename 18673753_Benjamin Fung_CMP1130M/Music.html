@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+	<link href="CSS/music.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="JS/spotify.js"></script>
+	<script src="JS/top.js"></script>
+</head>
+<body>
+	<!--Same header content as homepage but altered with the hyperlinks so that the Music page cannot be selected-->
+	<div id="top">
+		<div class="logo_left">
+		  <button class="dropbtn"><img id="imageLeft" src="https://www.logolynx.com/images/logolynx/32/321ad25963505d954862a08e3f453208.jpeg" width = "150" height = "150" alt = "NBHD logo"></button>
+		  <div class="dropcontent">
+			<a href="index.html">Home</a>
+			<a href="Events.html">Events</a>
+			<a href="Info.html">Info about the band</a>
+			<a href="Merchandise.html">Merchandise</a>
+		  </div>
+		</div>
+		<div class="links">
+			<nav>
+				<a href="index.html">Home</a> |
+				<a href="Events.html">Events</a> |
+				<a href="Music.html">Music</a> |
+				<a href="Info.html">Info about the band</a> |
+				<a href="Merchandise.html">Merchandise</a>
+			</nav>
+		</div>
+		<div class="logo_right">
+			<img  id="imageRight" src = "https://pbs.twimg.com/profile_images/1043159335990259712/eQ2YQhbD_400x400.jpg" width = "150" height = "150" alt = "Alt NBHD logo">
+		</div>
+	</div>
+	<br>
+	<!--showcase of the albums produced by the band-->
+	<div id="albums">
+		<nav id="library">
+			<p>Selection of albums:</p>
+			<!--clicking to show the spotify player and clicking again to hide-->
+			<div class="album1" onclick="album1()"><p>Click here to play tracks from this album:</p>
+				<img id="show1" src="https://is5-ssl.mzstatic.com/image/thumb/Music128/v4/1b/78/b2/1b78b202-321d-94df-078b-f23c5dd49eaa/source/1000x1000bb.jpg" alt="The Neighbourhood">
+  				<span class="player1" id="Popup1"><iframe id="spotify1" src="https://open.spotify.com/embed/album/0ODLCdHBFVvKwJGeSfd1jy" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></span>
+			</div>
+			<div class="album2" onclick="album2()"><p>Click here to play tracks from this album:</p>
+				<img id="show2" src="https://images.genius.com/9dbd572481142dfe867cfb6d5b3bfcfa.1000x1000x1.jpg" alt="Wiped out!">
+				<span class="player2" id="Popup2"><iframe id="spotify2" src="https://open.spotify.com/embed/album/18iFxjZugvKhuNNMbLjZJF" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></span>
+			</div>
+			<div class="album3" onclick="album3()"><p>Click here to play tracks from this album:</p>
+				<img id="show3" src="https://dx72k0ec4onep.cloudfront.net/product/1616/282537301478247252-1280x1280-888837049313.jpg" alt="I love you" height="220" width="220">
+				<span class="player3" id="Popup3"><iframe id="spotify3" src="https://open.spotify.com/embed/album/6iu2XwoDlKg0VYte9qAbnr" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></span>
+			</div>
+		</nav>
+	</div>
+	<div id="footer">
+		<button onclick="toTop()" id="topBtn" title="Go to top">Back to Top</button>
+	</div>
+</body>
+</html>

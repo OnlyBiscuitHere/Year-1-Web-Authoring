@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="JS/main.js"></script>
+	<link href="CSS/front.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div id="top">
+	<!--This the main header container-->
+	<!--Drop down menu hidden within the left logo-->
+		<div class="logo_left">
+		  <button class="dropbtn"><img id="imageLeft" src="https://www.logolynx.com/images/logolynx/32/321ad25963505d954862a08e3f453208.jpeg" width = "150" height = "150" alt = "NBHD logo"></button>
+		  <div class="dropcontent">
+			<a href="Events.html">Events</a>
+			<a href="Music.html">Music</a>
+			<a href="Info.html">Info about the band</a>
+			<a href="Merchandise.html">Merchandise</a>
+		  </div>
+		</div>
+		<!--The links to other pages-->
+		<div class="links">
+			<nav>
+				<a href="index.html">Home</a> |
+				<a href="Events.html">Events</a> |
+				<a href="Music.html">Music</a> |
+				<a href="Info.html">Info about the band</a> |
+				<a href="Merchandise.html">Merchandise</a>
+			</nav>
+		</div>
+		<div class="logo_right">
+			<img  id="imageRight" src = "https://pbs.twimg.com/profile_images/1043159335990259712/eQ2YQhbD_400x400.jpg" width = "150" height = "150" alt = "Alt NBHD logo">
+		</div>
+	</div>
+	<!--Main content-->
+	<!--A brief description of the band-->
+	<div id="text">
+		<p class="left">The Neighbourhood is an American rock band formed in Newbury Park, California, in 2011.<br> The band is composed of vocalist Jesse Rutherford, guitarists Jeremy Freedman and Zach Abels,<br> bassist Mikey Margott, and drummer Brandon Alexander Fried.</p>
+	</div>
+	<div id="main">
+		<!--Centered headline of the band-->
+		<div class="title">
+			<img id="title" src = "https://fontmeme.com/images/The-Neighbour-Logo-2.png" width = "600" height = "150" alt = "NBHD title">
+		</div>
+		<div class="media">
+			<!--Spotify API with embeded code-->
+			<div class="spotify">
+				<iframe id="player" src="https://open.spotify.com/embed/artist/77SW9BnxLY8rJ0RciFqkHh" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+			</div>
+			<div class="album">
+				<img id="albumCover" src = "https://66.media.tumblr.com/e9733fa88b4c85d4b8737bfc0229b6fe/tumblr_phl4aoJNOD1r1uv0ao1_500.jpg" height = "380" width = "310" alt="albumcover">
+			</div>
+			<!--Youtube API made with embeded code-->
+			<div class="youtube">
+				<iframe id="youtube" width="500" height="380" src="https://www.youtube.com/embed/GCdwKhTtNNw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

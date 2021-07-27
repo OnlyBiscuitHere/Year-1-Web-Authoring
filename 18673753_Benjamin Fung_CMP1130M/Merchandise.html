@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+	<link href="CSS/merch.css" rel="stylesheet" type="text/css">
+	<script src="JS/basket.js"></script>
+	<script src="JS/top.js"></script>
+</head>
+<body>
+	<!--Same header content as homepage but altered with the hyperlinks so that the info page cannot be selected-->
+	<div id="top">
+		<div class="logo_left">
+		  <button class="dropbtn"><img id="imageLeft" src="https://www.logolynx.com/images/logolynx/32/321ad25963505d954862a08e3f453208.jpeg" width = "150" height = "150" alt = "NBHD logo"></button>
+		  <div class="dropcontent">
+			<a href="index.html">Home</a>
+			<a href="Events.html">Events</a>
+			<a href="Music.html">Music</a>
+			<a href="Info.html">Info about the band</a>
+		  </div>
+		</div>
+		<div class="links">
+			<nav>
+				<a href="index.html">Home</a> |
+				<a href="Events.html">Events</a> |
+				<a href="Music.html">Music</a> |
+				<a href="Info.html">Info about the band</a> |
+				<a href="Merchandise.html">Merchandise</a>
+			</nav>
+		</div>
+		<div class="logo_right">
+			<img  id="imageRight" src = "https://pbs.twimg.com/profile_images/1043159335990259712/eQ2YQhbD_400x400.jpg" width = "150" height = "150" alt = "Alt NBHD logo">
+		</div>
+	</div>
+	<div id="main">
+	<!--information for the user so they know how to use it-->
+		<div id="fore">
+			<!--geolocation-->
+			<p class="geo">Please press the button below so we can get a location to send your items</p>
+			<button onClick="getLocation()">Press here</button>
+			<p class="instructions">To add an item to the basket.<br>Please drag and drop the image into the basket.<br>Refresh the page if you would like to remove all items</p>
+		</div>
+		<table class="inventory">
+		<!--Showcase of items avaliable in a table-->
+			<tr>
+				<th><img id="item1" src="https://cdn.shopify.com/s/files/1/1662/0725/products/MOCKS5_1024x1024.jpg?v=1541523533" alt="jacket" draggable="true" ondragstart="drag(event)" width="300" height="300"></th>
+				<th><img id="item2" src="https://cdn.shopify.com/s/files/1/1662/0725/products/mockup-bb76e5ee_1024x1024.png?v=1541540349" alt="shirt" draggable="true" ondragstart="drag(event)" width="300" height="300"></th>
+				<th><img id="item3" src="https://cdn.shopify.com/s/files/1/1662/0725/products/MOCKS3_1024x1024.jpg?v=1541523551" alt="jumper" draggable="true" ondragstart="drag(event)" width="300" height="300"></th>
+				<th><img id="item4" src="https://cdn.shopify.com/s/files/1/1662/0725/products/MOCKS1_1024x1024.jpg?v=1541523559" alt="jumper2" draggable="true" ondragstart="drag(event)" width="300" height="300"></th>
+			</tr>
+			<tr>
+				<td>HARD - COACH JACKET - RED<br>$50.00</td>
+				<td>CHAIN REACTION - SHIRT<br>$30.00</td>
+				<td>TO IMAGINE - CREWNECK - BLUE<br>$40.00</td>
+				<td>HARD TO IMAGINE THE NEIGHBOURHOOD EVER CHANIGNG LONGSLEEVE - BLACK<br>$40.00</td>
+			</tr>
+			<tr>
+				<th><img id="item5" src="https://cdn.shopify.com/s/files/1/1662/0725/products/MOCKS2_1024x1024.jpg?v=1541523568" alt="hoodie" draggable="true" ondragstart="drag(event)" width="300" height="300"></th>
+				<th><img id="item6" src="https://cdn.shopify.com/s/files/1/1662/0725/products/TheNBHD_Black_A_1024x1024.jpg?v=1541523520" alt="hat" draggable="true" ondragstart="drag(event)" width="300" height="300"></th>
+				<th><img id="item7" src="https://cdn.shopify.com/s/files/1/1662/0725/products/NBHD_LOGOHAT_1024x1024.jpg?v=1535997780" alt="hat2" draggable="true" ondragstart="drag(event)" width="300" height="300"></th>
+				<th><img id="item8" src="https://cdn.shopify.com/s/files/1/1662/0725/products/NBHD_Vinyl_1024x1024.jpg?v=1518800626" alt="album" draggable="true" ondragstart="drag(event)" width="300" height="300"></th>
+			</tr>
+			<tr>
+				<td>SELF TITLED - HOODIE - IRISH GREEN<br>$50.00</td>
+				<td>EVER CHANGING - HAT<br>$30.00</td>
+				<td>HANDDRAWN - HAT<br>$40.00</td>
+				<td>THE NEIGHBOURHOOD - ALBUM - LP<br>$28.98</td>
+			</tr>
+		</table>
+	</div>
+	<!--Basket location-->
+	<p>Here is your basket:</p>
+	<p id="location"></p>
+	<div id="basket" ondrop="drop(event)" ondragover="allowDrop(event)">
+	</div>
+	<!--A form for the checking out items from the store-->
+	<div id="checkout">
+		<form>
+			<div id="card">
+				<h1>Payment</h1>
+				<label for="cardName">Name on Card</label>
+					<input type="text" id="cardName" placeholder="John Samuel Smith">
+				<label for="CardNo">Card Number</label>
+					<input type="text" id="CardNo" placeholder="1111-2222-3333-4444">
+				<label for="ExpMonth">Expiramation month</label>
+					<input type="text" id="ExpMonth" placeholder="July">
+				<label for="ExpYear">Expiramation Year</label>
+					<input type="text" id="ExpYear" placeholder="08">
+				<label for="cvv">CVV</label>
+					<input type="text" id="cvv" placeholder="000">
+			</div>
+			<div id="billing">
+				<h1>Billing Address</h1>
+				<label for="name">Full Name</label>
+					<input type="text" id="name" placeholder="John S. Smith">
+				<label for="email">Email Address</label>
+					<input type="text" id="email" placeholder="JohnSmith@emailadddress.com">
+				<label for="address">Address</label>
+					<input type="text" id="address" placeholder="132 Road Street">
+				<label for="code">Post Code</label>
+					<input type="text" id="code" placeholder="AB1 2CB">
+			</div>
+			<label>
+				<input type="checkbox" checked="unchecked" name="sameAd">Shipping address is the same as Billing Address
+			</label>
+			<input type="submit" value="Continue to Checkout" class="btn">
+		</form>
+	</div>
+	<div id="footer">
+		<button onclick="toTop()" id="topBtn" title="Go to top">Back to Top</button>
+	</div>
+</body>
+</html>
